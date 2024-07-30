@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random number guessing game</title>
+</head>
+<body>
+    <p><strong>To play the game input any number (1-10)</strong></p>
+    <input id="inp" type="text">
+    <button id="but" >Submit</button>
+    <script>
+        var uservalue = 0;
+        document.getElementById("but").onclick=function(){
+        uservalue = document.getElementById("inp").value
+        var answer= Math.floor(Math.random() * 10) +1;
+        if(uservalue == answer){
+            alert("Your answer is correct");
+        }
+        else{
+            alert("Your answer is wrong")
+        }
+
+        }
+    </script>
+</body>
+</html>
